@@ -1,0 +1,29 @@
+1. URL dataset
+https://www.kaggle.com/datasets/roopacalistus/superstore/data
+
+2. Syntax DDL
+CREATE TABLE table_m3 (
+    id SERIAL PRIMARY KEY,
+    ship_mode TEXT,
+    segment TEXT,
+    Country TEXT,
+    City TEXT,
+    State TEXT,
+    postal_code TEXT,
+    Region TEXT,
+    Category TEXT,
+    sub_category TEXT,
+    Sales FLOAT,
+    Quantity INT,
+    Discount FLOAT,
+    Profit FLOAT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+COPY table_m3(ship_mode, segment, Country, City, State, postal_code, Region, Category, sub_category, Sales, Quantity, Discount, Profit)
+    FROM '/Users/wismaeka/Documents/ds/p2-ftds033-rmt-m3-wismaeka/P2M3_wisma_data_raw.csv' DELIMITER ',' CSV HEADER;
+
+
+3. Syntax DML
+
+Tidak melakukan DML.
